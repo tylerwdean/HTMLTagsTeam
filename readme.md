@@ -8,6 +8,6 @@ We will use HTML form tags, \_\_\_\_ & \_\_\_\_
 
 Tyler Dean
 
-Miguel Lock
+Miguel Joseph Lock
 
 Mia \_\_\_\_
