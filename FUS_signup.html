@@ -2,156 +2,146 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<Title>FUS Signup</Title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franciscan University Event Registration</title>
 </head>
 
 <body>
-	<h1>Franciscan University Event Registration Form</h1>
 
-	<!--All contained within form to streamline data submission-->
-	<form>
-		<!--Event Dropdown-->
-		<label for="event">Choose your event:</label>
-		<select name="event" id="event">
-			<option>Fr. Dave Lookalike Contest</option>
-			<option>Gregorian Chant Rap Battle</option>
-			<option>Witch Hunting</option>
-			<option>Monastic Silent Disco</option>
-			<option>Medieval Weapon Blessing & Tournament</option>
-			<option>"Is This a Heresy?" Game Show</option>
-		</select>
+    <!-- Header with navigation links -->
+    <header>
+        <h1>Franciscan University Event Registration</h1>
+        <nav>
+            <!-- Links to different sections of the page -->
+            <a href="#registration">Registration</a>
+            <a href="#registration-form">Registration Form</a>
+            <a href="#media">Media from Past Events</a>
+        </nav>
+    </header>
 
-		<br>
-		<br>
+    <!-- Registration Introduction Section -->
+    <section id="registration">
+        <h2>Registration</h2>
+        <p>Welcome to the official event registration page for Franciscan University! 
+            Please use the form below to sign up for one of our exciting events.</p>
+    </section>
 
-		<!--Personal Information Fieldset (fname, lname, email, birthday)-->
-		<fieldset>
-			<legend>Personal Information:</legend>
-			<label>First name:</label>
-			<input type="text"><br><br>
+    <!-- Event Registration Form Section -->
+    <section id="registration-form">
+        <h2>Event Registration Form</h2>
 
-			<label>Confirmation Saint:</label>
-			<input type="text"><br><br>
+        <form>
+            <!-- Dropdown to choose an event -->
+            <label for="event">Choose your event:</label>
+            <select name="event" id="event">
+                <option>Fr. Dave Lookalike Contest</option>
+                <option>Gregorian Chant Rap Battle</option>
+                <option>Witch Hunting</option>
+                <option>Monastic Silent Disco</option>
+                <option>Medieval Weapon Blessing & Tournament</option>
+                <option>"Is This a Heresy?" Game Show</option>
+            </select>
 
-			<label>Last name:</label>
-			<input type="text"><br><br>
+            <br><br>
 
-			<label for="fvocation">Most-Likely Future Vocation:</label>
-			<input type="text"><br><br>
+            <!-- Personal Information Fields -->
+            <fieldset>
+                <legend>Personal Information:</legend>
+                
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required><br><br>
 
-			<label>Most Likely to Be Martyred By:</label>
-			<input type="text"><br><br>
+                <label for="confirmation-saint">Confirmation Saint:</label>
+                <input type="text" id="confirmation-saint" name="confirmation-saint"><br><br>
 
-			<label>Latin Proficiency Level (1-10):</label>
-			<input type="number"><br><br>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required><br><br>
 
-			<label>Portiuncula Endurance Record (in hours):</label>
-			<input type="number"><br><br>
+                <label for="future-vocation">Most-Likely Future Vocation:</label>
+                <input type="text" id="future-vocation" name="future-vocation"><br><br>
 
-			<label>Email:</label>
-			<input type="email"><br><br>
+                <label for="martyrdom">Most Likely to Be Martyred By:</label>
+                <input type="text" id="martyrdom" name="martyrdom"><br><br>
 
-			<label>Birthday:</label>
-			<input type="date"><br>
-		</fieldset>
+                <label for="latin-proficiency">Latin Proficiency Level (1-10):</label>
+                <input type="number" id="latin-proficiency" name="latin-proficiency" min="1" max="10"><br><br>
 
+                <label for="portiuncula-endurance">Portiuncula Endurance Record (in hours):</label>
+                <input type="number" id="portiuncula-endurance" name="portiuncula-endurance"><br><br>
 
-		<br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
 
-		<!--Special Requests Text & Box-->
-		<label>Special Requests:</label><br>
-		<textarea rows="4" cols="50"></textarea>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required><br>
+            </fieldset>
 
-		<br>
-		<br>
-		<button>Submit</button>
-	</form>
+            <br>
 
+            <!-- Special Requests Section -->
+            <aside>
+                <label for="special-requests">Special Requests:</label><br>
+                <textarea id="special-requests" name="special-requests" rows="4" cols="50"></textarea>
+            </aside>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-	<hr class="double">
+    <hr class="double">
 
-	<h2>Media from past events:</h2>
+    <!-- Media Section -->
+    <section id="media">
+        <h2>Media from Past Events</h2>
 
-	<!--Embedded youtube link-->
-	<h3>First Annual Witch Hunt</h3>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5"
-		title="YouTube video player" frameborder="0" allow=" picture-in-picture" allowfullscreen>
-	</iframe>
+        <!-- Embedded Video -->
+        <h3>First Annual Witch Hunt</h3>
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="picture-in-picture" 
+                allowfullscreen>
+        </iframe>
 
-	<br>
-	<br>
+        <br><br>
 
-	<h3>12th Weekly Fortitude Friday</h3>
-	<img src="./media/images/benedictweights.jpg" alt="Shredded Saturday" width="300" height="400">
-	<figcaption><a target="_blank" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
-	<!--small texg or attribut caption-->
+        <!-- Image from a previous event -->
+        <h3>12th Weekly Fortitude Friday</h3>
+        <img src="./media/images/benedictweights.jpg" 
+             alt="Shredded Saturday - Monk lifting weights" 
+             width="300" height="400">
 
+        <!-- Audio tracks for event background music -->
+        <h4>Fortitude Friday Track List:</h4>
 
-	<h4>Fortitude Friday Track List:</h4>
-	<h5>Verdi's Requiem: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=X6cogix3cwQ">Dies irae</a>
-	</h5>
-	<audio controls>
-		<source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+        <audio controls>
+            <source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
-	<br>
-	<br>
+        <br>
 
-	<h5>Mozart's Requiem: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=MafAZeag1_0">Lacrimosa</a>
-	</h5>
-	<audio controls>
-		<source src="./media/audio/Mozart_ Requiem  Lacrimosa  SO & GC  CM Berlin.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+        <audio controls>
+            <source src="./media/audio/Mozart_ Requiem  Lacrimosa  SO & GC  CM Berlin.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
-	<br>
-	<br>
+        <br>
 
-	<h5>Bruckner: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=57u387gUkZ4">Ecce Sacerdos Magnus</a>
-	</h5>
-	<audio controls>
-		<source src="./media/audio/Bruckner_ Ecce sacerdos magnus, WAB 13 4.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+        <audio controls>
+            <source src="./media/audio/Bruckner_ Ecce sacerdos magnus, WAB 13 4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
 
-	<br>
-	<br>
-	<br>
-
-	<h3>New Hit Music Video: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=9IVKaOHJI0Y">Man in the Hall</a>
-	</h3>
-	<!---Video with multiple sources in case 1 doesn't work-->
-	<video width="640" height="360" controls>
-		<source src="./media/video/Trim - Man in the Hall.hevc" type="video/hevc">
-		<source src="./media/video/Trim - Man in the Hall.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-
-	<br>
-	<br>
-
-	<h3>TOR Paper Airplane Competition</a>
-	</h3>
-	<!--Embedded image!-->
-	<embed type=image/png src="./media/images/paper-plane.png" width="40%" height="40%"></embed>
-	<figcaption><a target="_blank" href="https://www.google.com/books/edition/Humility_Rules/jX44DwAAQBAJ?hl=en&gbpv=1&pg=PT12&printsec=frontcover">Image source</a></figcaption>
-
+    <!-- Footer -->
+    <footer>
+        <p>Videos pulled from YouTube. Copyright © 2025 Franciscan University.</p>
+    </footer>
 
 </body>
-
 </html>
