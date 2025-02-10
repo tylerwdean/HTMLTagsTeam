@@ -1,3 +1,4 @@
+
 <!-- HTML tags team assignment | Team 3-->
 
 <!DOCTYPE html>
@@ -10,7 +11,26 @@
 </head>
 
 <body>
+    <header>
 	<h1>Franciscan University Event Registration Form</h1>
+<nav>
+    <a href = "#registration">Registration</a>
+    <a href = "#registration-form">Event Registration Form</a>
+    <a href = "#media">Media from Past Events</a>
+</nav>
+    </header>
+
+    <section id="registration">
+        <h2>Registration</h2>
+        <p>Welcome to the official registration page for Franciscan University. 
+            Please use the form below to sign up for one of our exciting events.
+        </p>
+    </section>
+
+    <main>
+
+        <section id="registration-form">
+            <h2>Event Registration Form</h2>
 
 	<!--All contained within form to streamline data submission-->
 	<form>
@@ -63,14 +83,16 @@
 		<br>
 
 		<!--Special Requests Text & Box-->
+        <aside>
 		<label>Special Requests:</label><br>
 		<textarea rows="4" cols="50"></textarea>
+        </aside>
 
 		<br>
 		<br>
 		<button>Submit</button>
 	</form>
-
+        </section>
 
 	<br>
 	<br>
@@ -80,27 +102,33 @@
 
 	<hr class="double">
 
-	<h2>Media from past events:</h2>
+    <section id = "media">
+    	<h2>Media from past events:</h2>
 
 	<!--Embedded youtube link-->
+    <article>
 	<h3>First Annual Witch Hunt</h3>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5"
 		title="YouTube video player" frameborder="0" allow=" picture-in-picture" allowfullscreen>
 	</iframe>
+    </article>
 
 	<br>
 	<br>
 
+    <article>
 	<h3>12th Weekly Fortitude Friday</h3>
 	<img src="./media/images/benedictweights.jpg" alt="Shredded Saturday" width="300" height="400">
 	<figcaption><a target="_blank" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
-	<!--small texg or attribut caption-->
+    </article>
+    <!--small texg or attribut caption-->
 
 
 	<h4>Fortitude Friday Track List:</h4>
 	<h5>Verdi's Requiem: 
 		<a target="_blank" href="https://www.youtube.com/watch?v=X6cogix3cwQ">Dies irae</a>
 	</h5>
+
 	<audio controls>
 		<source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
@@ -150,8 +178,13 @@
 	<!--Embedded image!-->
 	<embed type=image/png src="./media/images/paper-plane.png" width="40%" height="40%"></embed>
 	<figcaption><a target="_blank" href="https://www.google.com/books/edition/Humility_Rules/jX44DwAAQBAJ?hl=en&gbpv=1&pg=PT12&printsec=frontcover">Image source</a></figcaption>
-
-
+    </section>
+    </main>
+    
+    <!-- Footer -->
+     <footer>
+<p>Videos pulled from YouTube.</p>
+     </footer>
 </body>
 
 </html>
