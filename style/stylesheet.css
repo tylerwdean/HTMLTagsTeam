@@ -1,0 +1,133 @@
+/*
+Color palette:
+#001219     - black
+#005F73     - dark blue
+#0A9396     - lighter blue
+#94D2BD     - lightest blue
+#E9D8A6     - creme
+#EE9B00     - yellow
+#CA6702     - orange
+#BB3E03     - blood orange
+#AE2012     - blood red
+#9B2226     - maroon
+*/
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #E9D8A6;
+}
+
+header {
+    background-color: #005F73;
+    border-radius: 25px;
+    color: #EE9B00;
+    text-align: center;
+}
+
+nav {
+    display:flex;
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+    color: #AE2012;
+    background-color: #005F73;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #94D2BD;
+}
+
+#registration {
+    background-color: #0A9396;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+#registration-form {
+    background-color: #BB3E03 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    color: #001219;
+}
+
+#registration-form {
+    color:#001219;
+    font-size: large;
+}
+
+#registration-form select {
+    background-color: #E9D8A6;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#registration-form fieldset {
+    border-radius: 10px;
+    border-color: #9B2226;
+}
+
+#registration-form fieldset input{
+    border: none;
+    border-radius: 5px;
+    color: #001219;
+    width: 100%; 
+    padding: 8px; /* Adds some padding for better appearance */
+    box-sizing: border-box; /* Ensures padding doesn’t overflow */
+    font-size: large;
+    background-color: #E9D8A6;
+}
+
+#registration-form textarea {
+    background-color: #E9D8A6;
+    width: 100%;
+    color:#001219;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+#registration-form button {
+    color: #001219;
+    border-radius: 10px;
+    background-color: #E9D8A6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+}
+
+#registration-form button:hover {
+    background-color: antiquewhite;
+}
+
+#media {
+    background-color: #001219;
+    border-radius: 25px;
+    color:#CA6702;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+#media a{
+    color: #CA6702;
+}
+
+.fortitude-friday {
+    display: flex;
+    gap: 75px;
+}
+
+.FortitudeFriday .music {
+    display: flex;
+    flex-direction: row;
+}
