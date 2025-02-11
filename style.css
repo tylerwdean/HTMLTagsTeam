@@ -99,6 +99,8 @@ label {
     padding: 12px;
     margin-bottom: 20px;
     width: fit-content;
+    /*height: fit-content;*/
+    margin: 10px;
 }
 
 .mini-section-with-border {
@@ -118,4 +120,14 @@ label {
 .mini-section-with-border h5, h3 {
     margin-top: 0px;
     margin-bottom: 12px;
+}
+
+.full-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
 }
