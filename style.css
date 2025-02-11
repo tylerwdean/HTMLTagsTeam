@@ -1,3 +1,12 @@
+.roboto-miggy {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 1;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
 :root {
     --main-color: #141414;
     --tile-color: #222226;
@@ -6,7 +15,8 @@
     --font-color: #f5f5ff;
     --header-color: #204029;
     --breadcrumbs-color: #54a66b;
-    --primary-font: Arial, sans-serif;
+    --border-color: #3b3b45;
+    --primary-font: "Roboto", serif;
 }
 
 header {
@@ -15,10 +25,6 @@ header {
     font-family: var(--primary-font);
     padding: 20px;
     text-align: center;
-}
-
-.colored-text {
-    color: var(--breadcrumbs-color);
 }
 
 a {
@@ -85,4 +91,31 @@ label {
 
 .container {
     flex-flow: column wrap;
+}
+
+.mini-section {
+    background-color: var(--tile-color);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.mini-section-with-border {
+    background-color: var(--tile-color);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: fit-content;
+    border: 1px solid var(--border-color);
+} 
+
+.mini-section h5, h3, h4 {
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.mini-section-with-border h5, h3 {
+    margin-top: 0px;
+    margin-bottom: 12px;
 }
