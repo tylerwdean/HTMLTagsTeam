@@ -31,6 +31,14 @@ a {
     color: var(--breadcrumbs-color);
 }
 
+.colored-text:hover {
+    color: var(--pressed-button-color);
+}
+
+.colored-text {
+    margin: 1rem;
+}
+
 body {
     background-color: var(--main-color);
     color: var(--font-color);
@@ -147,4 +155,25 @@ video {
 iframe {
     height: 380px;
     width: 675px;
+}
+
+footer {
+    background-color: var(--header-color);
+    color: var(--font-color);
+    font-family: var(--font-color);
+    padding: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.font-color {
+    color: var(--font-color);
 }
