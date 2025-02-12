@@ -131,3 +131,20 @@ video {
     max-width: 100%;
     height: auto;
 }
+
+img {
+    height: 360px;
+}
+
+embed {
+    height: 360px;
+}
+
+video {
+    height: 380px;
+}
+
+iframe {
+    height: 380px;
+    width: 675px;
+}
