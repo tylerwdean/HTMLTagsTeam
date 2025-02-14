@@ -8,16 +8,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<Title>FUS Signup</Title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-	<h1>Franciscan University Event Registration Form</h1>
-<nav>
-    <a href = "#registration">Registration</a>
-    <a href = "#registration-form">Event Registration Form</a>
-    <a href = "#media">Media from Past Events</a>
-</nav>
+		<h1>Franciscan University Event Registration Form</h1>
+		<nav>
+			<a class="colored-text" href = "#registration">Registration</a>
+			<a class="colored-text" href = "#registration-form">Event Registration Form</a>
+			<a class="colored-text" href = "#media">Media from Past Events</a>
+		</nav>
     </header>
 
     <section id="registration">
@@ -28,163 +32,167 @@
     </section>
 
     <main>
-
         <section id="registration-form">
             <h2>Event Registration Form</h2>
 
-	<!--All contained within form to streamline data submission-->
-	<form>
-		<!--Event Dropdown-->
-		<label for="event">Choose your event:</label>
-		<select name="event" id="event">
-			<option>Fr. Dave Lookalike Contest</option>
-			<option>Gregorian Chant Rap Battle</option>
-			<option>Witch Hunting</option>
-			<option>Monastic Silent Disco</option>
-			<option>Medieval Weapon Blessing & Tournament</option>
-			<option>"Is This a Heresy?" Game Show</option>
-		</select>
+		<!--All contained within form to streamline data submission-->
+		<form>
+			<!--Event Dropdown-->
+			<label for="event">Choose your event:</label>
+			<select name="event" id="event">
+				<option>Fr. Dave Lookalike Contest</option>
+				<option>Gregorian Chant Rap Battle</option>
+				<option>Witch Hunting</option>
+				<option>Monastic Silent Disco</option>
+				<option>Medieval Weapon Blessing & Tournament</option>
+				<option>"Is This a Heresy?" Game Show</option>
+			</select>
+
+			<br>
+			<br>
+
+			<!--Personal Information Fieldset (fname, lname, email, birthday)-->
+			<fieldset>
+				<legend>Personal Information:</legend>
+				<label>First name:</label>
+				<input type="text"><br><br>
+
+				<label>Confirmation Saint:</label>
+				<input type="text"><br><br>
+
+				<label>Last name:</label>
+				<input type="text"><br><br>
+
+				<label for="fvocation">Most-Likely Future Vocation:</label>
+				<input type="text"><br><br>
+
+				<label>Most Likely to Be Martyred By:</label>
+				<input type="text"><br><br>
+
+				<label>Latin Proficiency Level (1-10):</label>
+				<input type="number"><br><br>
+
+				<label>Portiuncula Endurance Record (in hours):</label>
+				<input type="number"><br><br>
+
+				<label>Email:</label>
+				<input type="email"><br><br>
+
+				<label>Birthday:</label>
+				<input type="date"><br>
+			</fieldset>
+
+
+			<br>
+
+			<!--Special Requests Text & Box-->
+			<aside>
+			<label>Special Requests:</label><br>
+			<textarea rows="4" cols="50"></textarea>
+			</aside>
+
+			<br>
+			<br>
+			<button>Submit</button>
+		</form>
+			</section>
 
 		<br>
 		<br>
-
-		<!--Personal Information Fieldset (fname, lname, email, birthday)-->
-		<fieldset>
-			<legend>Personal Information:</legend>
-			<label>First name:</label>
-			<input type="text"><br><br>
-
-			<label>Confirmation Saint:</label>
-			<input type="text"><br><br>
-
-			<label>Last name:</label>
-			<input type="text"><br><br>
-
-			<label for="fvocation">Most-Likely Future Vocation:</label>
-			<input type="text"><br><br>
-
-			<label>Most Likely to Be Martyred By:</label>
-			<input type="text"><br><br>
-
-			<label>Latin Proficiency Level (1-10):</label>
-			<input type="number"><br><br>
-
-			<label>Portiuncula Endurance Record (in hours):</label>
-			<input type="number"><br><br>
-
-			<label>Email:</label>
-			<input type="email"><br><br>
-
-			<label>Birthday:</label>
-			<input type="date"><br>
-		</fieldset>
-
-
-		<br>
-
-		<!--Special Requests Text & Box-->
-        <aside>
-		<label>Special Requests:</label><br>
-		<textarea rows="4" cols="50"></textarea>
-        </aside>
-
 		<br>
 		<br>
-		<button>Submit</button>
-	</form>
-        </section>
+		<br>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+		<hr class="double">
 
-	<hr class="double">
+		<section id="media">
+			<h2>Media from past events:</h2>
+			<section class="full-section">
+				<!--Embedded youtube link-->
+				<section class="mini-section">
+					<article>
+						<h3>First Annual Witch Hunt</h3>
+						<iframe src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5"
+							title="YouTube video player" frameborder="0" allow=" picture-in-picture" allowfullscreen>
+						</iframe>
+					</article>
+				</section>
 
-    <section id = "media">
-    	<h2>Media from past events:</h2>
-
-	<!--Embedded youtube link-->
-    <article>
-	<h3>First Annual Witch Hunt</h3>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5"
-		title="YouTube video player" frameborder="0" allow=" picture-in-picture" allowfullscreen>
-	</iframe>
-    </article>
-
-	<br>
-	<br>
-
-    <article>
-	<h3>12th Weekly Fortitude Friday</h3>
-	<img src="./media/images/benedictweights.jpg" alt="Shredded Saturday" width="300" height="400">
-	<figcaption><a target="_blank" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
-    </article>
-    <!--small texg or attribut caption-->
+				<section class="mini-section">
+					<article>
+					<h3>12th Weekly Fortitude Friday</h3>
+					<img src="./media/images/benedictweights.jpg" alt="Shredded Saturday">
+					<figcaption><a target="_blank" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
+					</article>
+				</section>
+				<!--small texg or attribut caption-->
 
 
-	<h4>Fortitude Friday Track List:</h4>
-	<h5>Verdi's Requiem: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=X6cogix3cwQ">Dies irae</a>
-	</h5>
+				<section class="mini-section">
+					<h4>Fortitude Friday Track List:</h4>
+					<div>
 
-	<audio controls>
-		<source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+					<section class="mini-section-with-border">
+							<h5>Verdi's Requiem: 
+							<a target="_blank" href="https://www.youtube.com/watch?v=X6cogix3cwQ">Dies irae</a>
+						</h5>
+						<audio controls>
+							<source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</section>
 
-	<br>
-	<br>
 
-	<h5>Mozart's Requiem: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=MafAZeag1_0">Lacrimosa</a>
-	</h5>
-	<audio controls>
-		<source src="./media/audio/Mozart_ Requiem  Lacrimosa  SO & GC  CM Berlin.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+					<section class="mini-section-with-border">
+						<h5>Mozart's Requiem: 
+							<a target="_blank" href="https://www.youtube.com/watch?v=MafAZeag1_0">Lacrimosa</a>
+						</h5>
+						<audio controls>
+							<source src="./media/audio/Mozart_ Requiem  Lacrimosa  SO & GC  CM Berlin.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</section>
 
-	<br>
-	<br>
+					<section class="mini-section-with-border">
+						<h5>Bruckner: 
+							<a target="_blank" href="https://www.youtube.com/watch?v=57u387gUkZ4">Ecce Sacerdos Magnus</a>
+						</h5>
+						<audio controls>
+							<source src="./media/audio/Bruckner_ Ecce sacerdos magnus, WAB 13 4.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</section>
+				</section>
 
-	<h5>Bruckner: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=57u387gUkZ4">Ecce Sacerdos Magnus</a>
-	</h5>
-	<audio controls>
-		<source src="./media/audio/Bruckner_ Ecce sacerdos magnus, WAB 13 4.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
+				<section class="mini-section">
+					<h3>New Hit Music Video: 
+						<a target="_blank" href="https://www.youtube.com/watch?v=9IVKaOHJI0Y">Man in the Hall</a>
+					</h3>
+					<!---Video with multiple sources in case 1 doesn't work-->
+					<video controls>
+						<source src="./media/video/Trim - Man in the Hall.hevc" type="video/hevc">
+						<source src="./media/video/Trim - Man in the Hall.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</section>
 
-	<br>
-	<br>
-	<br>
+				<section class="mini-section">
+					<h3>TOR Paper Airplane Competition</a>
+					</h3>
+					<!--Embedded image!-->
+					<embed type=image/png src="./media/images/paper-plane.png"></embed>
+					<figcaption><a target="_blank" href="https://www.google.com/books/edition/Humility_Rules/jX44DwAAQBAJ?hl=en&gbpv=1&pg=PT12&printsec=frontcover">Image source</a></figcaption>
+				</section>
+			</section>
+		</section>
 
-	<h3>New Hit Music Video: 
-		<a target="_blank" href="https://www.youtube.com/watch?v=9IVKaOHJI0Y">Man in the Hall</a>
-	</h3>
-	<!---Video with multiple sources in case 1 doesn't work-->
-	<video width="640" height="360" controls>
-		<source src="./media/video/Trim - Man in the Hall.hevc" type="video/hevc">
-		<source src="./media/video/Trim - Man in the Hall.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-
-	<br>
-	<br>
-
-	<h3>TOR Paper Airplane Competition</a>
-	</h3>
-	<!--Embedded image!-->
-	<embed type=image/png src="./media/images/paper-plane.png" width="40%" height="40%"></embed>
-	<figcaption><a target="_blank" href="https://www.google.com/books/edition/Humility_Rules/jX44DwAAQBAJ?hl=en&gbpv=1&pg=PT12&printsec=frontcover">Image source</a></figcaption>
-    </section>
-    </main>
+	</main>
     
-    <!-- Footer -->
-     <footer>
-<p>Videos pulled from YouTube.</p>
-     </footer>
+	<!-- Footer -->
+	<footer>
+		<p>Videos pulled from YouTube.</p>
+		<a class="font-color" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam/tree/miguel_css_mini">Miguel's GitHub Branch (for this project)</a>
+	</footer>
 </body>
 
 </html>
