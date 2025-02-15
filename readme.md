@@ -1,8 +1,8 @@
 # HTML Tag Teams Assignment
 
-## This project will take elements from 2 other teams and incorperate them to make a website to rule them all
+## This project is now in the style of the Franciscan Port
 
-We will use HTML form tags, Multimedia and Embedded Content, & \_\_\_\_
+Miguel selected the colors from their website and styled the CSS in this project to match it. 
 
 ## Team 3
 
@@ -10,4 +10,4 @@ Tyler Dean
 
 Miguel Lock
 
-Mia \_\_\_\_
+Mia Giswold
