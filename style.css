@@ -182,6 +182,18 @@ main {
     margin-bottom: 40px;
 }
 
+/* Added figcaption styling */
+figcaption {
+    color: var(--breadcrumbs-color);
+    font-style: italic;
+    text-align: center;
+
+}
+
+figcaption a {
+    text-decoration: none;
+}
+
 .font-color {
     color: var(--font-color);
 }
