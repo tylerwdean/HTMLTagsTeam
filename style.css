@@ -16,6 +16,8 @@ header {
     font-family: var(--primary-font);
     padding: 20px;
     text-align: center;
+    /* Adding Text Effects */
+    text-shadow: 0px 0px 4px black;
 }
 
 a {
@@ -46,6 +48,7 @@ input {
     font-family: var(--primary-font);
     padding: 10px;
 }
+
 input:focus {
     outline: none;
     border-color: var(--button-color);
@@ -68,6 +71,7 @@ textarea {
     font-family: var(--primary-font);
     padding: 10px;
 }
+
 textarea:focus {
     outline: none;
     border-color: var(--button-color);
@@ -112,14 +116,17 @@ label {
     margin-bottom: 20px;
     width: fit-content;
     border: 1px solid var(--border-color);
-} 
+}
 
-.mini-section h5, h3, h4 {
+.mini-section h5,
+h3,
+h4 {
     margin-top: 0px;
     margin-bottom: 12px;
 }
 
-.mini-section-with-border h5, h3 {
+.mini-section-with-border h5,
+h3 {
     margin-top: 0px;
     margin-bottom: 12px;
 }
@@ -134,7 +141,9 @@ video {
     height: auto;
 }
 
-img, embed, video {
+img,
+embed,
+video {
     height: 360px;
 }
 
@@ -144,20 +153,45 @@ iframe {
 }
 
 footer {
+    /* Sets the footer fixed at the bottom of the page */
+    position: fixed;
+    bottom: -0px;
+    width: 100%;
+    box-sizing: border-box;
     background-color: var(--header-color);
     color: var(--font-color);
     font-family: var(--font-color);
-    padding: 4px;
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: -20px;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    /* Offset the padding for the whole page*/
+
+    /* Adding Text Effects */
+    text-shadow: 0px 0px 4px black;
+
+}
+
+/* With the footer change, main is cut off at the bottom so added margin*/
+main {
+
+    margin-bottom: 40px;
+}
+
+/* Added figcaption styling */
+figcaption {
+    color: var(--breadcrumbs-color);
+    font-style: italic;
+    text-align: center;
+
+}
+
+figcaption a {
+    text-decoration: none;
 }
 
 .font-color {
