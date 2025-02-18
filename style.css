@@ -10,8 +10,6 @@
     --primary-font: "Roboto", serif;
 }
 
-
-
 header {
     background-color: var(--header-color);
     color: var(--font-color);
