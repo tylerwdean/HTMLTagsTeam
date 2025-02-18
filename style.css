@@ -153,8 +153,7 @@ iframe {
 }
 
 img {
-    filter: grayscale(50%);
-    filter: blur(5px);
+    filter: grayscale(100%);
 }
 
 footer {
