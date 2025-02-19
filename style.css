@@ -152,6 +152,10 @@ iframe {
     width: 675px;
 }
 
+img {
+    filter: grayscale(100%);
+}
+
 footer {
     /* Sets the footer fixed at the bottom of the page */
     position: fixed;
