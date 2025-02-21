@@ -1,18 +1,14 @@
-
-<!-- HTML tags team assignment | Team 3-->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<Title>FUS Signup</Title>
-	<!--<link rel="stylesheet" href="style.css">-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUS Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 
 <body class="bg-dark text-white">
@@ -40,9 +36,9 @@
             <h2 class="mb-4">Event Registration Form</h2>
             <form>
                 <!-- Event Dropdown -->
-                <div class="mb-3 col-6">
-                    <label for="event" class="form-label">Choose your event:</label>
-                    <select class="form-select" id="event">
+                <div class="mb-3 col-6 form-floating">
+                    <select class="form-select" id="event" required>
+                        <option value="">Choose your event</option>
                         <option>Fr. Dave Lookalike Contest</option>
                         <option>Gregorian Chant Rap Battle</option>
                         <option>Witch Hunting</option>
@@ -50,65 +46,65 @@
                         <option>Medieval Weapon Blessing & Tournament</option>
                         <option>"Is This a Heresy?" Game Show</option>
                     </select>
+                    <label for="event">Choose your event:</label>
                 </div>
 
                 <!-- Personal Information Fieldset -->
                 <fieldset class="mb-4">
                     <legend class="fs-5">Personal Information:</legend>
                     <div class="row">
-                        <div class="mb-3 col-6">
-                            <label class="form-label">First name:</label>
-                            <input type="text" class="form-control">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                            <label for="firstName" class="text-dark">First name:</label>
                         </div>
 
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Most-Likely Future Vocation:</label>
-                            <input type="text" class="form-control">
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Confirmation Saint:</label>
-                            <input type="text" class="form-control">
-                        </div>
-
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Most Likely to Be Martyred By:</label>
-                            <input type="text" class="form-control">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="text" class="form-control" id="vocation" placeholder="Most-Likely Future Vocation">
+                            <label for="vocation" class="text-dark">Most-Likely Future Vocation:</label>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Last name:</label>
-                            <input type="text" class="form-control">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="text" class="form-control" id="saint" placeholder="Confirmation Saint">
+                            <label for="saint" class="text-dark">Confirmation Saint:</label>
                         </div>
 
-                        <div class="mb-3 col-6">
-                            <label class="form-label col-6">Latin Proficiency Level (1-10):</label>
-                            <input type="number" class="form-control">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="text" class="form-control" id="martyrdom" placeholder="Most Likely to Be Martyred By">
+                            <label for="martyrdom" class="text-dark">Most Likely to Be Martyred By:</label>
                         </div>
                     </div>
-    
+
                     <div class="row">
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Email:</label>
-                            <input type="email" class="form-control">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                            <label for="lastName" class="text-dark">Last name:</label>
                         </div>
 
-                        <div class="mb-3 col-6">
-                            <label class="form-label">Birthday:</label>
-                            <input type="date" class="form-control">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" required>
+                            <label for="latin" class="text-dark">Latin Proficiency Level (1-10):</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <label for="email" class="text-dark">Email:</label>
+                        </div>
+
+                        <div class="mb-3 col-6 form-floating">
+                            <input type="date" class="form-control" id="birthday" placeholder="Birthday" required>
+                            <label for="birthday" class="text-dark">Birthday:</label>
                         </div>
                     </div>
                 </fieldset>
 
                 <!-- Special Requests Textarea -->
-                <div class="mb-3">
-                    <label class="form-label">Special Requests:</label>
-                    <textarea class="form-control" rows="4"></textarea>
+                <div class="mb-3 form-floating">
+                    <textarea class="form-control" id="requests" placeholder="Special Requests" style="height: 100px"></textarea>
+                    <label for="requests" class="text-dark">Special Requests:</label>
                 </div>
 
                 <!-- Submit Button -->
@@ -207,7 +203,6 @@
 
     <!-- Footer -->
     <footer class="bg-success py-3 text-center fixed-bottom">
-
         <div class="row">
             <div class="col-6"><p class="mb-0 text-white">Videos pulled from YouTube.</p></div>
             <div class="col-6"><a class="text-decoration-none text-white" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam.git">GitHub Repo (for this project)</a></div>
