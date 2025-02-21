@@ -15,13 +15,13 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 
-<body>
+<body class="bg-dark text-white">
     <!-- Header -->
     <header class="bg-success py-3 text-center text-white">
         <div class="container">
             <h1 class="display-4 mb-4">Franciscan University Event Registration Form</h1>
             <div class="row justify-content-center">
-                <div class="col-auto"><a class="text-white text-decoration-none" href="#registration">Registration</a></div>
+                <div class="col-auto"><a class="text-white text-decoration-none text-hover-danger" href="#registration">Registration</a></div>
                 <div class="col-auto"><a class="text-white text-decoration-none" href="#registration-form">Event Registration Form</a></div>
                 <div class="col-auto"><a class="text-white text-decoration-none" href="#media">Media from Past Events</a></div>
             </div>
@@ -30,8 +30,8 @@
 
     <!-- Registration Section -->
     <section id="registration" class="container my-5">
-        <h2 class="mb-3">Registration</h2>
-        <p class="lead">Welcome to the official registration page for Franciscan University. Please use the form below to sign up for one of our exciting events.</p>
+        <h2 class="mb-3 text-center">Registration</h2>
+        <p class="lead text-center">Welcome to the official registration page for Franciscan University. Please use the form below to sign up for one of our exciting events.</p>
     </section>
 
     <!-- Registration Form Section -->
@@ -40,7 +40,7 @@
             <h2 class="mb-4">Event Registration Form</h2>
             <form>
                 <!-- Event Dropdown -->
-                <div class="mb-3">
+                <div class="mb-3 col-6">
                     <label for="event" class="form-label">Choose your event:</label>
                     <select class="form-select" id="event">
                         <option>Fr. Dave Lookalike Contest</option>
@@ -55,41 +55,53 @@
                 <!-- Personal Information Fieldset -->
                 <fieldset class="mb-4">
                     <legend class="fs-5">Personal Information:</legend>
-                    <div class="mb-3">
-                        <label class="form-label">First name:</label>
-                        <input type="text" class="form-control">
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label class="form-label">First name:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Most-Likely Future Vocation:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Confirmation Saint:</label>
-                        <input type="text" class="form-control">
+
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Confirmation Saint:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Most Likely to Be Martyred By:</label>
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Last name:</label>
-                        <input type="text" class="form-control">
+
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Last name:</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label col-6">Latin Proficiency Level (1-10):</label>
+                            <input type="number" class="form-control">
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Most-Likely Future Vocation:</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Most Likely to Be Martyred By:</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Latin Proficiency Level (1-10):</label>
-                        <input type="number" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Portiuncula Endurance Record (in hours):</label>
-                        <input type="number" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email:</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Birthday:</label>
-                        <input type="date" class="form-control">
+    
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Email:</label>
+                            <input type="email" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-6">
+                            <label class="form-label">Birthday:</label>
+                            <input type="date" class="form-control">
+                        </div>
                     </div>
                 </fieldset>
 
@@ -100,7 +112,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </section>
 
@@ -180,7 +192,7 @@
                 </div>
 
                 <!-- Embedded Image -->
-                <div class="col-md-6">
+                <div class="col-md-6 mb-5">
                     <article class="card h-100">
                         <div class="card-body">
                             <h3 class="card-title">TOR Paper Airplane Competition</h3>
@@ -194,9 +206,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-light py-3 text-center">
-        <p class="mb-0">Videos pulled from YouTube.</p>
-        <a class="text-decoration-none" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam.git">Team's GitHub Repo (for this project)</a>
+    <footer class="bg-success py-3 text-center fixed-bottom">
+
+        <div class="row">
+            <div class="col-6"><p class="mb-0 text-white">Videos pulled from YouTube.</p></div>
+            <div class="col-6"><a class="text-decoration-none text-white" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam.git">GitHub Repo (for this project)</a></div>
+        </div>
     </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
