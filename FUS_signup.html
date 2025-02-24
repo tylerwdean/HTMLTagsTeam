@@ -1,197 +1,252 @@
-
 <!-- HTML tags team assignment | Team 3-->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<Title>FUS Signup</Title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUS Signup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
-    <header>
-		<h1>Franciscan University Event Registration Form</h1>
-		<nav>
-			<a class="colored-text" href = "#registration">Registration</a>
-			<a class="colored-text" href = "#registration-form">Event Registration Form</a>
-			<a class="colored-text" href = "#media">Media from Past Events</a>
-		</nav>
+
+  <body>
+    <header class="navbar bg-light justify-content-center vstack">
+      <h1>Franciscan University Event Registration Form</h1>
+      <nav>
+        <a class="badge bg-success text-white" href="#registration">Registration</a>
+        <a class="badge bg-success text-white" href="#registration-form">Event Registration Form</a>
+        <a class="badge bg-success text-white" href="#media">Media from Past Events</a>
+      </nav>
     </header>
 
-    <section id="registration">
-        <h2>Registration</h2>
-        <p>Welcome to the official registration page for Franciscan University. 
-            Please use the form below to sign up for one of our exciting events.
-        </p>
+    <section class="container" id="registration">
+      <h2>Registration</h2>
+      <p>Welcome to the official registration page for Franciscan University.
+        Please use the form below to sign up for one of our exciting events.
+      </p>
     </section>
 
-    <main>
-        <section id="registration-form">
-            <h2>Event Registration Form</h2>
+    <main class="container">
+      <section id="registration-form">
+        <h2>Event Registration Form</h2>
 
-		<!--All contained within form to streamline data submission-->
-		<form>
-			<!--Event Dropdown-->
-			<label for="event">Choose your event:</label>
-			<select name="event" id="event">
-				<option>Fr. Dave Lookalike Contest</option>
-				<option>Gregorian Chant Rap Battle</option>
-				<option>Witch Hunting</option>
-				<option>Monastic Silent Disco</option>
-				<option>Medieval Weapon Blessing & Tournament</option>
-				<option>"Is This a Heresy?" Game Show</option>
-			</select>
+        <!--All contained within form to streamline data submission-->
+        <form>
+          <!--Event Dropdown-->
+          <label>Choose your event:</label>
+          <select class="form-select">
+            <option>Fr. Dave Lookalike Contest</option>
+            <option>Gregorian Chant Rap Battle</option>
+            <option>Witch Hunting</option>
+            <option>Monastic Silent Disco</option>
+            <option>Medieval Weapon Blessing & Tournament</option>
+            <option>"Is This a Heresy?" Game Show</option>
+          </select>
 
-			<br>
-			<br>
+          <br>
 
-			<!--Personal Information Fieldset (fname, lname, email, birthday)-->
-			<fieldset>
-				<legend>Personal Information:</legend>
-				<label>First name:</label>
-				<input type="text"><br><br>
+          <!--Personal Information Fieldset (fname, lname, email, birthday)-->
+          <fieldset>
+            <legend>Personal Information:</legend>
 
-				<label>Confirmation Saint:</label>
-				<input type="text"><br><br>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">First name</label>
+                </div>
+              </div>
 
-				<label>Last name:</label>
-				<input type="text"><br><br>
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Confirmation Saint</label>
+                </div>
+              </div>
+            </div>
 
-				<label for="fvocation">Most-Likely Future Vocation:</label>
-				<input type="text"><br><br>
-
-				<label>Most Likely to Be Martyred By:</label>
-				<input type="text"><br><br>
-
-				<label>Latin Proficiency Level (1-10):</label>
-				<input type="number"><br><br>
-
-				<label>Portiuncula Endurance Record (in hours):</label>
-				<input type="number"><br><br>
-
-				<label>Email:</label>
-				<input type="email"><br><br>
-
-				<label>Birthday:</label>
-				<input type="date"><br>
-			</fieldset>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Last name</label>
+                </div>
+              </div>
 
 
-			<br>
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Most-likely future vocation</label>
+                </div>
+              </div>
+            </div>
 
-			<!--Special Requests Text & Box-->
-			<aside>
-			<label>Special Requests:</label><br>
-			<textarea rows="4" cols="50"></textarea>
-			</aside>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Most likely to be martyred by</label>
+                </div>
+              </div>
 
-			<br>
-			<br>
-			<button>Submit</button>
-		</form>
-			</section>
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Latin proficiency level (1-10)</label>
+                </div>
+              </div>
+            </div>
 
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Favorite saint</label>
+                </div>
+              </div>
 
-		<hr class="double">
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Portiuncula Edurance Record (in hours)</label>
+                </div>
+              </div>
+            </div>
 
-		<section id="media">
-			<h2>Media from past events:</h2>
-			<section class="full-section">
-				<!--Embedded youtube link-->
-				<section class="mini-section">
-					<article>
-						<h3>First Annual Witch Hunt</h3>
-						<iframe src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5"
-							title="YouTube video player" frameborder="0" allow=" picture-in-picture" allowfullscreen>
-						</iframe>
-					</article>
-				</section>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Email</label>
+                </div>
+              </div>
 
-				<section class="mini-section">
-					<article>
-					<h3>12th Weekly Fortitude Friday</h3>
-					<img src="./media/images/benedictweights.jpg" alt="Shredded Saturday">
-					<figcaption><a target="_blank" class="colored-text" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
-					</article>
-				</section>
-				<!--small texg or attribut caption-->
+              <div class="col-lg">
+                <div class="form-floating mb-3">
+                  <input type="date" class="form-control" id="floatingInput" placeholder>
+                  <label for="floatingInput">Birthday</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
 
-				<section class="mini-section">
-					<h4>Fortitude Friday Track List:</h4>
-					<div>
-
-					<section class="mini-section-with-border">
-							<h5>Verdi's Requiem: 
-							<a target="_blank" href="https://www.youtube.com/watch?v=X6cogix3cwQ">Dies irae</a>
-						</h5>
-						<audio controls>
-							<source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
-							Your browser does not support the audio element.
-						</audio>
-					</section>
+          <!--Special Requests Text & Box-->
+          <div class="form-floating">
+            <textarea class="form-control" placeholder></textarea>
+            <label>Special Requests</label>
+          </div>
+          <br>
+          <button class="btn btn-primary">Submit</button>
+        </form>
+      </section>
 
 
-					<section class="mini-section-with-border">
-						<h5>Mozart's Requiem: 
-							<a target="_blank" href="https://www.youtube.com/watch?v=MafAZeag1_0">Lacrimosa</a>
-						</h5>
-						<audio controls>
-							<source src="./media/audio/Mozart_ Requiem  Lacrimosa  SO & GC  CM Berlin.mp3" type="audio/mpeg">
-							Your browser does not support the audio element.
-						</audio>
-					</section>
+      <br>
+      <br>
 
-					<section class="mini-section-with-border">
-						<h5>Bruckner: 
-							<a target="_blank" href="https://www.youtube.com/watch?v=57u387gUkZ4">Ecce Sacerdos Magnus</a>
-						</h5>
-						<audio controls>
-							<source src="./media/audio/Bruckner_ Ecce sacerdos magnus, WAB 13 4.mp3" type="audio/mpeg">
-							Your browser does not support the audio element.
-						</audio>
-					</section>
-				</section>
+      <section id="media">
+        <h2>Media from past events:</h2>
+        <section class="full-section">
+          <!--Embedded youtube link-->
+          <section class="card">
+            <article>
+              <h3>First Annual Witch Hunt</h3>
+              <iframe src="https://www.youtube.com/embed/_lu5_5Od7WY?si=fAHw5_rzT4UJK2C5" title="YouTube video player"
+                frameborder="0" allow=" picture-in-picture" allowfullscreen>
+              </iframe>
+            </article>
+          </section>
 
-				<section class="mini-section">
-					<h3>New Hit Music Video: 
-						<a target="_blank" href="https://www.youtube.com/watch?v=9IVKaOHJI0Y">Man in the Hall</a>
-					</h3>
-					<!---Video with multiple sources in case 1 doesn't work-->
-					<video controls>
-						<source src="./media/video/Trim - Man in the Hall.hevc" type="video/hevc">
-						<source src="./media/video/Trim - Man in the Hall.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</section>
+          <br>
+          <section class="card">
+            <article>
+              <h3>12th Weekly Fortitude Friday</h3>
+              <img src="./media/images/benedictweights.jpg" alt="Shredded Saturday">
+              <figcaption><a target="_blank" class="colored-text" href="https://benedicteen.blogspot.com/2016/02/">Image
+                  source</a></figcaption>
+            </article>
+          </section>
+          <!--small texg or attribut caption-->
 
-				<section class="mini-section">
-					<h3>TOR Paper Airplane Competition</a>
-					</h3>
-					<!--Embedded image!-->
-					<embed type=image/png src="./media/images/paper-plane.png"></embed>
-					<figcaption><a class="colored-text" target="_blank" href="https://www.google.com/books/edition/Humility_Rules/jX44DwAAQBAJ?hl=en&gbpv=1&pg=PT12&printsec=frontcover">Image source</a></figcaption>
-				</section>
-			</section>
-		</section>
+          <br>
+          <section class="card">
+            <h4>Fortitude Friday Track List:</h4>
+            <div>
 
-	</main>
-    
-	<!-- Footer -->
-	<footer>
-		<p>Videos pulled from YouTube.</p>
-		<a class="font-color" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam.git">Team's GitHub Repo (for this project)</a>
-	</footer>
-</body>
+              <section class="mini-section-with-border">
+                <h5>Verdi's Requiem:
+                  <a target="_blank" href="https://www.youtube.com/watch?v=X6cogix3cwQ">Dies irae</a>
+                </h5>
+                <audio controls>
+                  <source src="./media/audio/Verdis Requiem_ Dies irae.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </section>
+
+
+              <section class="mini-section-with-border">
+                <h5>Mozart's Requiem:
+                  <a target="_blank" href="https://www.youtube.com/watch?v=MafAZeag1_0">Lacrimosa</a>
+                </h5>
+                <audio controls>
+                  <source src="./media/audio/Mozart_ Requiem  Lacrimosa  SO & GC  CM Berlin.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </section>
+
+              <section class="mini-section-with-border">
+                <h5>Bruckner:
+                  <a target="_blank" href="https://www.youtube.com/watch?v=57u387gUkZ4">Ecce Sacerdos Magnus</a>
+                </h5>
+                <audio controls>
+                  <source src="./media/audio/Bruckner_ Ecce sacerdos magnus, WAB 13 4.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </section>
+          </section>
+
+          <br>
+          <section class="card">
+            <h3>New Hit Music Video:
+              <a target="_blank" href="https://www.youtube.com/watch?v=9IVKaOHJI0Y">Man in the Hall</a>
+            </h3>
+            <!---Video with multiple sources in case 1 doesn't work-->
+            <video controls>
+              <source src="./media/video/Trim - Man in the Hall.hevc" type="video/hevc">
+              <source src="./media/video/Trim - Man in the Hall.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </section>
+
+          <br>
+          <section class="card">
+            <h3>TOR Paper Airplane Competition</a>
+            </h3>
+            <!--Embedded image!-->
+            <embed type=image/png src="./media/images/paper-plane.png"></embed>
+            <figcaption><a class="colored-text" target="_blank"
+                href="https://www.google.com/books/edition/Humility_Rules/jX44DwAAQBAJ?hl=en&gbpv=1&pg=PT12&printsec=frontcover">Image
+                source</a></figcaption>
+          </section>
+        </section>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-light text-center">
+      <p>Videos pulled from YouTube.</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 
 </html>
