@@ -36,8 +36,8 @@
             <h2 class="mb-4">Event Registration Form</h2>
             <form>
                 <!-- Event Dropdown -->
-                <div class="mb-3 col-6 form-floating">
-                    <select class="form-select" id="event" required>
+                <div class="mb-3 col-6">
+                    <select class="form-select py-2" id="event" required>
                         <option value="">Choose your event</option>
                         <option>Fr. Dave Lookalike Contest</option>
                         <option>Gregorian Chant Rap Battle</option>
@@ -46,57 +46,73 @@
                         <option>Medieval Weapon Blessing & Tournament</option>
                         <option>"Is This a Heresy?" Game Show</option>
                     </select>
-                    <label for="event">Choose your event:</label>
                 </div>
 
                 <!-- Personal Information Fieldset -->
                 <fieldset class="mb-4">
                     <legend class="fs-5">Personal Information:</legend>
+
                     <div class="row">
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="text" class="form-control" id="firstName" placeholder="First name" required>
-                            <label for="firstName" class="text-dark">First name:</label>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control" id="firstName" placeholder>
+                                <label for="firstName" class="text-dark">First name:</label>
+                            </div>
                         </div>
 
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="text" class="form-control" id="vocation" placeholder="Most-Likely Future Vocation">
-                            <label for="vocation" class="text-dark">Most-Likely Future Vocation:</label>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Most-Likely Future Vocation">
+                                <label for="floatingInput" class="text-dark">Most-Likely Future Vocation:</label>
+                            </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="text" class="form-control" id="saint" placeholder="Confirmation Saint">
-                            <label for="saint" class="text-dark">Confirmation Saint:</label>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control" id="saint" placeholder="Confirmation Saint">
+                                <label for="saint" class="text-dark">Confirmation Saint:</label>
+                            </div>
                         </div>
 
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="text" class="form-control" id="martyrdom" placeholder="Most Likely to Be Martyred By">
-                            <label for="martyrdom" class="text-dark">Most Likely to Be Martyred By:</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
-                            <label for="lastName" class="text-dark">Last name:</label>
-                        </div>
-
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" required>
-                            <label for="latin" class="text-dark">Latin Proficiency Level (1-10):</label>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control" id="martyrdom" placeholder="Most Likely to Be Martyred By">
+                                <label for="martyrdom" class="text-dark">Most Likely to Be Martyred By:</label>
+                            </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="email" class="form-control" id="email" placeholder="Email" required>
-                            <label for="email" class="text-dark">Email:</label>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                                <label for="lastName" class="text-dark">Last name:</label>
+                            </div>
                         </div>
 
-                        <div class="mb-3 col-6 form-floating">
-                            <input type="date" class="form-control" id="birthday" placeholder="Birthday" required>
-                            <label for="birthday" class="text-dark">Birthday:</label>
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" required>
+                                <label for="latin" class="text-dark">Latin Proficiency Level (1-10):</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <label for="email" class="text-dark">Email:</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6">
+                            <div class="mb-3 form-floating">
+                                <input type="date" class="form-control" id="birthday" placeholder="Birthday" required>
+                                <label for="birthday" class="text-dark">Birthday:</label>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
