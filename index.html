@@ -21,6 +21,7 @@
                     <div class="col-auto"><a class="text-white text-decoration-none" href="#registration-form">Event Registration Form</a></div>
                     <div class="col-auto"><a class="text-white text-decoration-none" href="#media">Media from Past Events</a></div>
                 </div>
+              </div>
             </div>
         </header>
 
@@ -38,7 +39,7 @@
                 <form id="eventForm">
                     <!-- Event Dropdown -->
                     <div class="mb-3 col-6">
-                        <select class="form-select py-2 text-dark" id="event" required>
+                        <select class="form-select py-2 text-dark" id="event" >
                             <option value="">Choose your event</option>
                             <option>Fr. Dave Lookalike Contest</option>
                             <option>Gregorian Chant Rap Battle</option>
@@ -88,14 +89,14 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last name" >
                                     <label for="lastName" class="text-dark">Last name:</label>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" required>
+                                    <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" >
                                     <label for="latin" class="text-dark">Latin Proficiency Level (1-10):</label>
                                 </div>
                             </div>
@@ -107,7 +108,7 @@
                                      <!--this.value is the content of the input element-->
                                      <!--this.value is passedd into the validateEmail function in the javascript file-->
                                      <!--the javascript function is called every time the content of the input element is updated-->
-                                    <input type="email" class="form-control" id="email" placeholder="Email" oninput="validateEmail(this.value)" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" oninput="validateEmail(this.value)" >
 
                                     <!--text box governed by index.js (no default text!)-->
                                     <p id="output"></p>
@@ -117,7 +118,7 @@
                             
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="date" class="form-control" id="birthday" placeholder="Birthday" required>
+                                    <input type="date" class="form-control" id="birthday" placeholder="Birthday" >
                                     <label for="birthday" class="text-dark">Birthday:</label>
                                 </div>
                             </div>

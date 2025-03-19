@@ -1,5 +1,7 @@
 // Get the formSubmission button
 var button = document.getElementById('formSubmission');
+const form = document.getElementById("event-form");
+const formAlert = document.getElementById("form-alert");
 
 // Default form submission button is disabled
 button.disabled = true;
@@ -27,21 +29,52 @@ function validateEmail(myInput) {
 
 // Loads items from localStorage when the page is loaded
 // If item not in local storage: returns empty string
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('firstName').value = localStorage.getItem('firstName') || '';
-    document.getElementById('confirmationSaint').value = localStorage.getItem('confirmationSaint') || '';
-    document.getElementById('lastName').value = localStorage.getItem('lastName') || '';
-    document.getElementById('email').value = localStorage.getItem('email') || '';
+document.addEventListener('DOMContentLoaded', function () {
+    try {
+        const savedForm = localStorage.getItem("formData");
+        const savedData = JSON.parse(savedForm);
+        console.log("Form data pulled from storage: ", savedForm);
+
+        for (const [key, value] of Object.entries(savedData)) {
+            const elements = document.getElementsByName(key)
+
+            for (const element of elements) {
+                element.value = value || "";
+            }
+        }
+    } catch (error) {
+        console.error(error);
+    }
 });
 
-// gets the items in eventform when the submit button is clicked
-document.getElementById('eventForm').addEventListener('submit', function(event) {
-    // Prevent the default form submission
-    event.preventDefault();
+//store and validate inputs on submits
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("Form submitted");
 
-    // Save the form data to localStorage
-    localStorage.setItem("firstName", this.firstName.value);
-    localStorage.setItem("confirmationSaint", this.confirmationSaint.value);
-    localStorage.setItem("lastName", this.lastName.value);
-    localStorage.setItem("email", this.email.value);   
-});
+    //check for all the items to have some content
+    let formFilled = true;
+
+    //check the event dropdown
+    const formData = new FormData(form);
+
+    let formJSON = {};
+    for (const [key, value] of formData.entries()) {
+        if (key == 'event' && value == "default") formFilled = false;
+        if (value == "" || key == "requests") formFilled = false;
+        formJSON[key] = value;
+    }
+
+
+    //show the alert if it't not filled
+    if (!formFilled) {
+        formAlert.removeAttribute('hidden')
+    } else {
+        formAlert.hidden = true;
+    }
+
+    //save form to local storage
+    formJSON = JSON.stringify(formJSON);
+    localStorage.setItem("formData", formJSON);
+    console.log("Form data stored: ", formJSON);
+})
