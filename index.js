@@ -10,6 +10,7 @@ function validateEmail(myInput) {
     // Regular expression to check for valid email
     var regularExpression = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
+<<<<<<< HEAD
     if (regularExpression.test(myInput)) { // If email input passes the REGEX
         // Deletes the warning below the email input
         document.getElementById("output").textContent = null;
@@ -24,6 +25,11 @@ function validateEmail(myInput) {
         // Ensure the button is disabled
         // Used if a correct email was inputted then removed
         button.disabled = true;
+=======
+        for (const element of elements) {
+            element.value = value || "";
+        }
+>>>>>>> 25b291e (Fixed alert logic issue)
     }
 }
 
@@ -61,7 +67,7 @@ form.addEventListener('submit', (e) => {
     let formJSON = {};
     for (const [key, value] of formData.entries()) {
         if (key == 'event' && value == "default") formFilled = false;
-        if (value == "" || key == "requests") formFilled = false;
+        if (value == "" && key != "requests") formFilled = false;
         formJSON[key] = value;
     }
 
