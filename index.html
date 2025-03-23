@@ -103,7 +103,13 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                     <!--this.value is the content of the input element-->
+                                     <!--this.value is passedd into the validateEmail function in the javascript file-->
+                                     <!--the javascript function is called every time the content of the input element is updated-->
+                                    <input type="email" class="form-control" id="email" placeholder="Email" oninput="validateEmail(this.value)" required>
+
+                                    <!--text box governed by index.js (no default text!)-->
+                                    <p id="output"></p>
                                     <label for="email" class="text-dark">Email:</label>
                                 </div>
                             </div>
@@ -124,7 +130,8 @@
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <!--added id "formSubmission" so the button can be disabled in the JS-->
+                    <button id="formSubmission" type="submit" class="btn btn-success">Submit</button>
                 </form>
             </section>
 
@@ -228,5 +235,6 @@
         <!--<script src="bootstrap/js/bootstrap.bundle.min.js"></script>-->
     </body>
 
+    <!--Linking the index.js file-->
     <script src="index.js"></script>
 </html>
