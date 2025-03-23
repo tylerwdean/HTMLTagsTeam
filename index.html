@@ -34,7 +34,8 @@
         <main class="container">
             <section id="registration-form" class="mb-5">
                 <h2 class="mb-4">Event Registration Form</h2>
-                <form>
+                <!--added id to event for for JS to use-->
+                <form id="eventForm">
                     <!-- Event Dropdown -->
                     <div class="mb-3 col-6">
                         <select class="form-select py-2 text-dark" id="event" required>
@@ -62,8 +63,8 @@
 
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="Most-Likely Future Vocation">
-                                    <label for="floatingInput" class="text-dark">Most-Likely Future Vocation:</label>
+                                    <input type="text" class="form-control" id="futureVocation" placeholder="Most-Likely Future Vocation">
+                                    <label for="futureVocation" class="text-dark">Most-Likely Future Vocation:</label>
                                 </div>
                             </div>
                         </div>
@@ -71,8 +72,8 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="saint" placeholder="Confirmation Saint">
-                                    <label for="saint" class="text-dark">Confirmation Saint:</label>
+                                    <input type="text" class="form-control" id="confirmationSaint" placeholder="Confirmation Saint">
+                                    <label for="confirmationSaint" class="text-dark">Confirmation Saint:</label>
                                 </div>
                             </div>
 
