@@ -163,3 +163,33 @@ function cycleImage(e) {
             img.setAttribute('src', imgArray[currentPic].url);
         });
 }
+
+const loadButton = document.getElementById("load-section-btn");
+
+loadButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    loadSection();
+    loadButton.hidden = true;
+})
+
+
+
+function loadSection() {
+    const newSection = document.createElement('section');
+    newSection.className = "mb-5";
+    newSection.id = "dynamic-section";
+    newSection.innerHTML = `
+        <hr/>
+        <h3>Surprise!</h3>
+        <p>We actually just ran out of more content to load, come back again soon!</p>
+        <button class="btn btn-success mb-5" onclick="removeSection(this)">Remove</button>
+    `;
+    document.getElementById('main').appendChild(newSection);
+}
+
+function removeSection(button) {
+    // Find the parent section and remove it
+    const sectionToRemove = button.closest('section');
+    sectionToRemove.remove();
+    loadButton.hidden = false;
+}
