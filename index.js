@@ -6,6 +6,10 @@ const sections = document.querySelectorAll("section")
 const navLinks = document.querySelectorAll(".navLinks");//Contains different navLinks
 //change the navigation bar on scroll
 window.addEventListener('scroll', updateLinks)
+document.getElementById('scroll-top').addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollToTop();
+});
 
 // Default form submission button is disabled
 button.disabled = true;
@@ -89,6 +93,9 @@ form.addEventListener('submit', (e) => {
     console.log("Form data stored: ", formJSON);
 })
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 //Function written by Team 5- This will find the section which takes up the most amount of the window
 function getMostVisibleSection() {
