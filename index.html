@@ -21,6 +21,7 @@
                     <div class="col-auto"><a class="text-white text-decoration-none" href="#registration-form">Event Registration Form</a></div>
                     <div class="col-auto"><a class="text-white text-decoration-none" href="#media">Media from Past Events</a></div>
                 </div>
+              </div>
             </div>
         </header>
 
@@ -32,20 +33,21 @@
 
         <!-- Registration Form Section -->
         <main class="container">
+            <div id="form-alert" class="alert alert-warning" role="alert" hidden>Some form fields are blank, ensure each field is answered</div>
             <section id="registration-form" class="mb-5">
                 <h2 class="mb-4">Event Registration Form</h2>
                 <!--added id to event for for JS to use-->
-                <form id="eventForm">
+                <form id="event-form">
                     <!-- Event Dropdown -->
                     <div class="mb-3 col-6">
-                        <select class="form-select py-2 text-dark" id="event" required>
-                            <option value="">Choose your event</option>
-                            <option>Fr. Dave Lookalike Contest</option>
-                            <option>Gregorian Chant Rap Battle</option>
-                            <option>Witch Hunting</option>
-                            <option>Monastic Silent Disco</option>
-                            <option>Medieval Weapon Blessing & Tournament</option>
-                            <option>"Is This a Heresy?" Game Show</option>
+                        <select class="form-select py-2 text-dark" id="event" name="select-event">
+                            <option value="default">Choose your event</option>
+                            <option value="option1">Fr. Dave Lookalike Contest</option>
+                            <option value="option2">Gregorian Chant Rap Battle</option>
+                            <option value="option3">Witch Hunting</option>
+                            <option value="option4">Monastic Silent Disco</option>
+                            <option value="option5">Medieval Weapon Blessing & Tournament</option>
+                            <option value="option6">"Is This a Heresy?" Game Show</option>
                         </select>
                     </div>
 
@@ -56,14 +58,14 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="firstName" placeholder>
+                                    <input type="text" class="form-control" id="firstName" placeholder name="firstName">
                                     <label for="firstName" class="text-dark">First name:</label>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="futureVocation" placeholder="Most-Likely Future Vocation">
+                                    <input type="text" class="form-control" id="futureVocation" placeholder="Most-Likely Future Vocation" name="vocation">
                                     <label for="futureVocation" class="text-dark">Most-Likely Future Vocation:</label>
                                 </div>
                             </div>
@@ -72,14 +74,14 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="confirmationSaint" placeholder="Confirmation Saint">
+                                    <input type="text" class="form-control" id="confirmationSaint" placeholder="Confirmation Saint" name="confirmation">
                                     <label for="confirmationSaint" class="text-dark">Confirmation Saint:</label>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="martyrdom" placeholder="Most Likely to Be Martyred By">
+                                    <input type="text" class="form-control" id="martyrdom" placeholder="Most Likely to Be Martyred By" name="martryed">
                                     <label for="martyrdom" class="text-dark">Most Likely to Be Martyred By:</label>
                                 </div>
                             </div>
@@ -88,14 +90,14 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last name" name="lastName">
                                     <label for="lastName" class="text-dark">Last name:</label>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" required>
+                                    <input type="number" class="form-control" id="latin" placeholder="Latin Proficiency Level (1-10)" min="1" max="10" name="latin">
                                     <label for="latin" class="text-dark">Latin Proficiency Level (1-10):</label>
                                 </div>
                             </div>
@@ -107,7 +109,7 @@
                                      <!--this.value is the content of the input element-->
                                      <!--this.value is passedd into the validateEmail function in the javascript file-->
                                      <!--the javascript function is called every time the content of the input element is updated-->
-                                    <input type="email" class="form-control" id="email" placeholder="Email" oninput="validateEmail(this.value)" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" oninput="validateEmail(this.value)" name="email">
 
                                     <!--text box governed by index.js (no default text!)-->
                                     <p id="output"></p>
@@ -117,7 +119,7 @@
                             
                             <div class="col-6">
                                 <div class="mb-3 form-floating">
-                                    <input type="date" class="form-control" id="birthday" placeholder="Birthday" required>
+                                    <input type="date" class="form-control" id="birthday" placeholder="Birthday" name="birthday">
                                     <label for="birthday" class="text-dark">Birthday:</label>
                                 </div>
                             </div>
@@ -126,7 +128,7 @@
 
                     <!-- Special Requests Textarea -->
                     <div class="mb-3 form-floating">
-                        <textarea class="form-control" id="requests" placeholder="Special Requests" style="height: 100px"></textarea>
+                        <textarea class="form-control" id="requests" placeholder="Special Requests" style="height: 100px" name="requests"></textarea>
                         <label for="requests" class="text-dark">Special Requests:</label>
                     </div>
 
