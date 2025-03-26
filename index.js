@@ -84,3 +84,8 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem("formData", formJSON);
     console.log("Form data stored: ", formJSON);
 })
+
+//change the navigation bar on scroll
+window.addEventListener('scroll', (e) => {
+
+})
