@@ -4,8 +4,12 @@ const form = document.getElementById("event-form");
 const formAlert = document.getElementById("form-alert");
 const sections = document.querySelectorAll("section")
 const navLinks = document.querySelectorAll(".navLinks");//Contains different navLinks
+let currentPic = 0;
+
+
 //change the navigation bar on scroll
 window.addEventListener('scroll', updateLinks)
+document.getElementById('cycle-img').addEventListener('click', (e) => cycleImage(e));
 document.getElementById('scroll-top').addEventListener('click', (e) => {
     e.preventDefault();
     scrollToTop();
@@ -139,4 +143,23 @@ function updateLinks() {
             link.className = "navLinks text-white text-decoration-underline";
         }
     });
+}
+
+function cycleImage(e) {
+    e.preventDefault();
+
+    currentPic = (currentPic + 1) % 3;
+    const link = document.getElementById('fortitude-link');
+    const img = document.getElementById('fortitude-img');
+    let imgArray = null;
+    console.log("cylcing image");
+    //get the JSON data to load the images
+    fetch('imageLinks.json')
+        .then((response) => response.json())
+        .then((json) => {
+            imgArray = json;
+            console.log(imgArray);
+            link.setAttribute('href', imgArray[currentPic].src);
+            img.setAttribute('src', imgArray[currentPic].url);
+        });
 }
