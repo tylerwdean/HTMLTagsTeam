@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 element.value = value || "";
             }
         }
+        //see if the loaded email is valid
+        validateEmail(savedData.email);
     } catch (error) {
         console.error(error);
     }
