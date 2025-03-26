@@ -2,6 +2,18 @@
 var button = document.getElementById('formSubmission');
 const form = document.getElementById("event-form");
 const formAlert = document.getElementById("form-alert");
+const sections = document.querySelectorAll("section")
+const navLinks = document.querySelectorAll(".navLinks");//Contains different navLinks
+let currentPic = 0;
+
+
+//change the navigation bar on scroll
+window.addEventListener('scroll', updateLinks)
+document.getElementById('cycle-img').addEventListener('click', (e) => cycleImage(e));
+document.getElementById('scroll-top').addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollToTop();
+});
 
 // Default form submission button is disabled
 button.disabled = true;
@@ -84,3 +96,100 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem("formData", formJSON);
     console.log("Form data stored: ", formJSON);
 })
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+//Function written by Team 5- This will find the section which takes up the most amount of the window
+function getMostVisibleSection() {
+    //Set initial variables to nothing
+    let mostVisible = null;
+    let maxVisibleArea = 0;
+
+    //Checks the height for each section
+    sections.forEach((section) => {//Loops through each section
+        const rect = section.getBoundingClientRect();//Get size of each section
+
+        //Checks the visible height and returns 0 or the amount of the section which is on the screen
+        const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+
+        //Checks if a sections visibility is greater than the maxVisibleArea variable which starts at 0
+        if (visibleHeight > maxVisibleArea) {
+            maxVisibleArea = visibleHeight;
+            mostVisible = section;//Changes which section is considered most visible
+        }
+    })
+
+    if (window.scrollY < 100) {
+        mostVisible = document.getElementById("registration")
+    }
+
+    //Returns the most visible section
+    return mostVisible;
+}
+
+//function based on team 5's work, but heavily modified for our project
+function updateLinks() {
+    //Gets most visible section
+    const mostVisibleSection = getMostVisibleSection();
+    const sectionId = mostVisibleSection.id;//Collects the most visible section's id
+
+    //Removes the underline from each navLink
+    navLinks.forEach((link) => {
+        link.className = "navLinks text-white text-decoration-none";
+        //if the link is the one for the most visible section, underline it
+        if (link.getAttribute('href') == `#${sectionId}`) {
+            link.className = "navLinks text-white text-decoration-underline";
+        }
+    });
+}
+
+function cycleImage(e) {
+    e.preventDefault();
+
+    currentPic = (currentPic + 1) % 3;
+    const link = document.getElementById('fortitude-link');
+    const img = document.getElementById('fortitude-img');
+    let imgArray = null;
+    console.log("cylcing image");
+    //get the JSON data to load the images
+    fetch('imageLinks.json')
+        .then((response) => response.json())
+        .then((json) => {
+            imgArray = json;
+            console.log(imgArray);
+            link.setAttribute('href', imgArray[currentPic].src);
+            img.setAttribute('src', imgArray[currentPic].url);
+        });
+}
+
+const loadButton = document.getElementById("load-section-btn");
+
+loadButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    loadSection();
+    loadButton.hidden = true;
+})
+
+
+
+function loadSection() {
+    const newSection = document.createElement('section');
+    newSection.className = "mb-5";
+    newSection.id = "dynamic-section";
+    newSection.innerHTML = `
+        <hr/>
+        <h3>Surprise!</h3>
+        <p>We actually just ran out of more content to load, come back again soon!</p>
+        <button class="btn btn-success mb-5" onclick="removeSection(this)">Remove</button>
+    `;
+    document.getElementById('main').appendChild(newSection);
+}
+
+function removeSection(button) {
+    // Find the parent section and remove it
+    const sectionToRemove = button.closest('section');
+    sectionToRemove.remove();
+    loadButton.hidden = false;
+}

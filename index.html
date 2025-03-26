@@ -13,17 +13,21 @@
 
     <body class="bg-dark text-white">
         <!-- Header -->
-        <header class="bg-success py-3 text-center text-white">
+        <div class="bg-success p2-3 text-center text-white">
             <div class="container">
-                <h1 class="display-4 mb-4">Franciscan University Event Registration Form</h1>
-                <div class="row justify-content-center">
-                    <div class="col-auto"><a class="text-white text-decoration-none text-hover-danger" href="#registration">Registration</a></div>
-                    <div class="col-auto"><a class="text-white text-decoration-none" href="#registration-form">Event Registration Form</a></div>
-                    <div class="col-auto"><a class="text-white text-decoration-none" href="#media">Media from Past Events</a></div>
-                </div>
-              </div>
+                <h1 class="display-4 pb-2 mb-0">Franciscan University Event Registration Form</h1>
             </div>
-        </header>
+        </div>
+        <!-- This div will be the sticky navigation bar -->
+        <div class="sticky-top bg-success py-2">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-auto"><a class="navLinks text-white text-decoration-none" href="#registration">Registration</a></div>
+                    <div class="col-auto"><a class="navLinks text-white text-decoration-none" href="#registration-form">Event Registration Form</a></div>
+                    <div class="col-auto"><a class="navLinks text-white text-decoration-none" href="#media">Media from Past Events</a></div>
+                </div>
+            </div>
+        </div>
 
         <!-- Registration Section -->
         <section id="registration" class="container my-5">
@@ -32,7 +36,7 @@
         </section>
 
         <!-- Registration Form Section -->
-        <main class="container">
+        <main class="container" id="main">
             <div id="form-alert" class="alert alert-warning" role="alert" hidden>Some form fields are blank, ensure each field is answered</div>
             <section id="registration-form" class="mb-5">
                 <h2 class="mb-4">Event Registration Form</h2>
@@ -161,9 +165,10 @@
                         <article class="card h-100">
                             <div class="card-body">
                                 <h3 class="card-title">12th Weekly Fortitude Friday</h3>
-                                <img src="./media/images/benedictweights.jpg" class="img-fluid" alt="Shredded Saturday">
-                                <figcaption class="mt-2"><a target="_blank" class="text-decoration-none" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
+                                <img id="fortitude-img" src="./media/images/benedictweights.jpg" class="img-fluid" alt="Shredded Saturday">
+                                <figcaption class="mt-2"><a id="fortitude-link" target="_blank" class="text-decoration-none" href="https://benedicteen.blogspot.com/2016/02/">Image source</a></figcaption>
                             </div>
+                            <button id="cycle-img" class="btn btn-success mx-2 mb-2">Next Image</button>
                         </article>
                     </div>
 
@@ -214,7 +219,7 @@
                     </div>
 
                     <!-- Embedded Image -->
-                    <div class="col-md-6 mb-5">
+                    <div class="col-md-6">
                         <article class="card h-100">
                             <div class="card-body">
                                 <h3 class="card-title">TOR Paper Airplane Competition</h3>
@@ -225,13 +230,19 @@
                     </div>
                 </div>
             </section>
+
+            <button id="load-section-btn" class="btn btn-success mb-5">Load More</button>
+
+            <!--This is for spacing the footer, which is always on the bottom-->
+            <div class="my-5"></div>
         </main>
 
         <!-- Footer -->
         <footer class="bg-success py-3 text-center fixed-bottom">
             <div class="row">
-                <div class="col-6"><p class="mb-0 text-white">Videos pulled from YouTube.</p></div>
-                <div class="col-6"><a class="text-decoration-none text-white" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam.git">GitHub Repo (for this project)</a></div>
+                <div class="col"><p class="mb-0 text-white">Videos pulled from YouTube.</p></div>
+                <div class="col"><a class="text-decoration-none text-white" target="_blank" href="https://github.com/tylerwdean/HTMLTagsTeam.git">GitHub Repo (for this project)</a></div>
+                <div class="col"><a class="text-decoration-none text-white" id="scroll-top" href="">Back to Top</a></div>
             </div>
         </footer>
 
