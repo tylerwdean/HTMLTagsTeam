@@ -4,9 +4,8 @@ const form = document.getElementById("event-form");
 const formAlert = document.getElementById("form-alert");
 const sections = document.querySelectorAll("section")
 const navLinks = document.querySelectorAll(".navLinks");//Contains different navLinks
-
-console.log(sections);
-console.log(navLinks);
+//change the navigation bar on scroll
+window.addEventListener('scroll', updateLinks)
 
 // Default form submission button is disabled
 button.disabled = true;
@@ -90,9 +89,6 @@ form.addEventListener('submit', (e) => {
     console.log("Form data stored: ", formJSON);
 })
 
-//change the navigation bar on scroll
-window.addEventListener('scroll', updateLinks)
-
 
 //Function written by Team 5- This will find the section which takes up the most amount of the window
 function getMostVisibleSection() {
@@ -122,7 +118,7 @@ function getMostVisibleSection() {
     return mostVisible;
 }
 
-//function written by team 5 - updates the links in the navbar
+//function based on team 5's work, but heavily modified for our project
 function updateLinks() {
     //Gets most visible section
     const mostVisibleSection = getMostVisibleSection();
@@ -131,8 +127,8 @@ function updateLinks() {
     //Removes the underline from each navLink
     navLinks.forEach((link) => {
         link.className = "navLinks text-white text-decoration-none";
+        //if the link is the one for the most visible section, underline it
         if (link.getAttribute('href') == `#${sectionId}`) {
-            console.log("Underlining");
             link.className = "navLinks text-white text-decoration-underline";
         }
     });
