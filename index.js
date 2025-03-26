@@ -2,6 +2,11 @@
 var button = document.getElementById('formSubmission');
 const form = document.getElementById("event-form");
 const formAlert = document.getElementById("form-alert");
+const sections = document.querySelectorAll("section")
+const navLinks = document.querySelectorAll(".navLinks");//Contains different navLinks
+
+console.log(sections);
+console.log(navLinks);
 
 // Default form submission button is disabled
 button.disabled = true;
@@ -86,6 +91,49 @@ form.addEventListener('submit', (e) => {
 })
 
 //change the navigation bar on scroll
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', updateLinks)
 
-})
+
+//Function written by Team 5- This will find the section which takes up the most amount of the window
+function getMostVisibleSection() {
+    //Set initial variables to nothing
+    let mostVisible = null;
+    let maxVisibleArea = 0;
+
+    //Checks the height for each section
+    sections.forEach((section) => {//Loops through each section
+        const rect = section.getBoundingClientRect();//Get size of each section
+
+        //Checks the visible height and returns 0 or the amount of the section which is on the screen
+        const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+
+        //Checks if a sections visibility is greater than the maxVisibleArea variable which starts at 0
+        if (visibleHeight > maxVisibleArea) {
+            maxVisibleArea = visibleHeight;
+            mostVisible = section;//Changes which section is considered most visible
+        }
+    })
+
+    if (window.scrollY < 100) {
+        mostVisible = document.getElementById("registration")
+    }
+
+    //Returns the most visible section
+    return mostVisible;
+}
+
+//function written by team 5 - updates the links in the navbar
+function updateLinks() {
+    //Gets most visible section
+    const mostVisibleSection = getMostVisibleSection();
+    const sectionId = mostVisibleSection.id;//Collects the most visible section's id
+
+    //Removes the underline from each navLink
+    navLinks.forEach((link) => {
+        link.className = "navLinks text-white text-decoration-none";
+        if (link.getAttribute('href') == `#${sectionId}`) {
+            console.log("Underlining");
+            link.className = "navLinks text-white text-decoration-underline";
+        }
+    });
+}
