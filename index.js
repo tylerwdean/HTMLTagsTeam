@@ -9,7 +9,8 @@ let currentPic = 0;
 
 //change the navigation bar on scroll
 window.addEventListener('scroll', updateLinks)
-document.getElementById('cycle-img').addEventListener('click', (e) => cycleImage(e));
+document.getElementById('cycle-img').addEventListener('click', (e) => cycleImage(e, 1));
+document.getElementById('back-cycle-img').addEventListener('click', (e) => cycleImage(e, 0));
 document.getElementById('scroll-top').addEventListener('click', (e) => {
     e.preventDefault();
     scrollToTop();
@@ -145,10 +146,15 @@ function updateLinks() {
     });
 }
 
-function cycleImage(e) {
+function cycleImage(e, cycleForward) {
     e.preventDefault();
 
-    currentPic = (currentPic + 1) % 3;
+    if (cycleForward == 1) {
+        currentPic = (currentPic + 1) % 3;
+    } else {
+        currentPic = (currentPic + 2) % 3; // Same as (currentPic - 1 + 3) % 3
+    }
+
     const link = document.getElementById('fortitude-link');
     const img = document.getElementById('fortitude-img');
     let imgArray = null;
@@ -193,3 +199,58 @@ function removeSection(button) {
     sectionToRemove.remove();
     loadButton.hidden = false;
 }
+
+//pause play button
+const pausePlayButton = document.getElementById("PausePlay");
+const video = document.getElementById("video");
+
+pausePlayButton.addEventListener("click", () => {
+    if (video.paused) {
+        video.play();
+        pausePlayButton.textContent = "Pause";
+    }
+    else {
+        video.pause();
+        pausePlayButton.textContent = "Play";
+    }
+});
+
+const slider = document.getElementById("video_volume");
+
+video_volume.addEventListener("input", () => {
+    video.volume = slider.value;
+})
+
+function handleCaptions(videoElement, captions) {
+    const captionContainer = document.getElementById("captionContainer");
+    
+    // Listen for time updates on the video
+    videoElement.addEventListener('timeupdate', function() {
+        // Get current video time
+        const currentTime = videoElement.currentTime;
+        
+        // Find matching caption for current time
+        const currentCaption = captions.find(caption => 
+            currentTime >= caption.start && currentTime <= caption.end
+        );
+        
+        // Display the caption if there's an active one
+        if (currentCaption) {
+            captionContainer.textContent = currentCaption.text;
+        } else {
+            captionContainer.textContent = ""; // Clear if no caption is active
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoElement = document.getElementById("video");
+    
+    // Fetch captions from JSON file
+    fetch('./captions.json')
+        .then(response => response.json())
+        .then(captions => {
+            handleCaptions(videoElement, captions);
+    })
+    .catch(error => console.error("Error loading captions:", error));
+});
